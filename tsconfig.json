@@ -21,7 +21,8 @@
       "@pages/*": ["src/pages/*"],
       "@remote/*": ["src/remote/*"],
       "@constants": ["src/constants/index"],
-      "@constants/*": ["src/constant/*"]
+      "@constants/*": ["src/constant/*"],
+      "@models/*": ["src/models/*"]
     },
     "jsxImportSource": "@emotion/react",
     "forceConsistentCasingInFileNames": true
