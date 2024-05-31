@@ -6,6 +6,8 @@ import InfiniteScroll from 'react-infinite-scroll-component'
 import { getCards } from '@/remote/card'
 import ListRow from '@/components/shared/ListRow'
 import Badge from '@/components/shared/Badge'
+import Top from '@/components/shared/Top'
+import Input from '@/components/shared/Input'
 
 const CardListPage = () => {
   const {
@@ -37,6 +39,14 @@ const CardListPage = () => {
 
   return (
     <div>
+      <Top title="추천카드" subTitle="회원님을 위한 추천카드입니다." />
+      <div style={{ padding: '0 24px 12px 24px' }}>
+        <Input
+          onFocus={() => {
+            navigate.push('/card/search')
+          }}
+        />
+      </div>
       <InfiniteScroll
         dataLength={cards?.length}
         hasMore={hasNextPage}
