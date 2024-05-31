@@ -5,7 +5,7 @@ import { QueryClientProvider, QueryClient } from 'react-query'
 import globalStyles from '@/styles/globalStyles'
 import Layout from '@/components/shared/Layout'
 
-const client = new QueryClient()
+const client = new QueryClient({})
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
