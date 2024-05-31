@@ -14,7 +14,7 @@ const EventBanners = () => {
   const { data } = useEventBanner()
 
   return (
-    <div>
+    <div style={{ padding: 24 }}>
       <Swiper spaceBetween={8}>
         {data?.map((banner) => {
           return (
@@ -47,6 +47,14 @@ const bannerStyle = css`
   border-radius: 8px;
 `
 
+export const BannerSkeleton = () => {
+  return (
+    <div style={{ padding: 24 }}>
+      <Skeleton width="100%" height={100} style={{ borderRadius: 8 }} />
+    </div>
+  )
+}
+
 export default withSuspense(EventBanners, {
-  fallback: <Skeleton width="100%" height={100} style={{ borderRadius: 8 }} />,
+  fallback: <BannerSkeleton />,
 })
