@@ -37,6 +37,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-prettier", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:9.1.0"],\
           ["eslint-plugin-prettier", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:5.1.3"],\
           ["firebase", "npm:10.12.2"],\
+          ["framer-motion", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:11.2.10"],\
           ["next", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:13.5.6"],\
           ["prettier", "npm:3.2.5"],\
           ["react", "npm:18.3.1"],\
@@ -1989,6 +1990,7 @@ const RAW_RUNTIME_STATE =
           ["eslint-config-prettier", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:9.1.0"],\
           ["eslint-plugin-prettier", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:5.1.3"],\
           ["firebase", "npm:10.12.2"],\
+          ["framer-motion", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:11.2.10"],\
           ["next", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:13.5.6"],\
           ["prettier", "npm:3.2.5"],\
           ["react", "npm:18.3.1"],\
@@ -3521,6 +3523,37 @@ const RAW_RUNTIME_STATE =
           ["foreground-child", "npm:3.1.1"],\
           ["cross-spawn", "npm:7.0.3"],\
           ["signal-exit", "npm:4.1.0"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["framer-motion", [\
+      ["npm:11.2.10", {\
+        "packageLocation": "../../../.yarn/berry/cache/framer-motion-npm-11.2.10-3bbc864848-10c0.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "npm:11.2.10"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:11.2.10", {\
+        "packageLocation": "./.yarn/__virtual__/framer-motion-virtual-1052d22d16/4/.yarn/berry/cache/framer-motion-npm-11.2.10-3bbc864848-10c0.zip/node_modules/framer-motion/",\
+        "packageDependencies": [\
+          ["framer-motion", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:11.2.10"],\
+          ["@emotion/is-prop-valid", null],\
+          ["@types/emotion__is-prop-valid", null],\
+          ["@types/react", "npm:18.3.3"],\
+          ["@types/react-dom", "npm:18.3.0"],\
+          ["react", "npm:18.3.1"],\
+          ["react-dom", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:18.3.1"],\
+          ["tslib", "npm:2.6.2"]\
+        ],\
+        "packagePeers": [\
+          "@emotion/is-prop-valid",\
+          "@types/emotion__is-prop-valid",\
+          "@types/react-dom",\
+          "@types/react",\
+          "react-dom",\
+          "react"\
         ],\
         "linkType": "HARD"\
       }]\
