@@ -7,7 +7,7 @@ import Text from '@shared/Text'
 
 import useEventBanner from './hooks/useEventBanner'
 import Link from 'next/link'
-import withSuspense from '../shared/hocs/withSuspense'
+import withSuspense from '../shared/hooks/withSuspense'
 import Skeleton from '../shared/Skeleton'
 
 const EventBanners = () => {

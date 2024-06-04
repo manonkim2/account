@@ -1,5 +1,5 @@
 import Badge from '@/components/shared/Badge'
-import useDebounce from '@/components/shared/hocs/useDebounce'
+import useDebounce from '@/components/shared/hooks/useDebounce'
 import Input from '@/components/shared/Input'
 import ListRow from '@/components/shared/ListRow'
 import Text from '@/components/shared/Text'

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import Badge from '../shared/Badge'
 import Button from '../shared/Button'
-import withSuspense from '../shared/hocs/withSuspense'
+import withSuspense from '../shared/hooks/withSuspense'
 import ListRow from '../shared/ListRow'
 import Skeleton from '../shared/Skeleton'
 import Text from '../shared/Text'
