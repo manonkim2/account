@@ -6,6 +6,7 @@ import { QueryClientProvider, QueryClient, Hydrate } from 'react-query'
 import globalStyles from '@/styles/globalStyles'
 import Layout from '@/components/shared/Layout'
 import AuthGuard from '@/components/auth/AuthGuard'
+import Navbar from '@/components/shared/Navbar'
 
 const client = new QueryClient({})
 
@@ -20,6 +21,7 @@ export default function App({
         <QueryClientProvider client={client}>
           <Hydrate state={dehydratedState}>
             <AuthGuard>
+              <Navbar />
               <Component {...pageProps} />
             </AuthGuard>
           </Hydrate>
