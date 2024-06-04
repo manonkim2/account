@@ -1,4 +1,5 @@
 import dynamic from 'next/dynamic'
+import { useSession, signIn, signOut } from 'next-auth/react'
 
 import { BannerSkeleton } from '@components/home/EventBanners'
 import Account from '@/components/home/Account'
@@ -15,6 +16,9 @@ const CardList = dynamic(() => import('@components/home/CardList'), {
 })
 
 export default function Home() {
+  const { data } = useSession()
+  console.log('🚀 ~ Home ~ data:', data)
+
   return (
     <div>
       <EventBanners />
