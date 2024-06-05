@@ -1,5 +1,4 @@
-import Alert from '@/components/shared/Alert'
-import React, {
+import {
   ComponentProps,
   createContext,
   useCallback,
@@ -7,7 +6,10 @@ import React, {
   useMemo,
   useState,
 } from 'react'
+
 import { createPortal } from 'react-dom'
+
+import Alert from '@shared/Alert'
 
 type AlertProps = ComponentProps<typeof Alert>
 type AlertOptions = Omit<AlertProps, 'open'>
@@ -25,12 +27,12 @@ const defaultValues: AlertProps = {
   onButtonClick: () => {},
 }
 
-export const AlertContextProvider = ({
+export function AlertContextProvider({
   children,
 }: {
   children: React.ReactNode
-}) => {
-  const [alertState, setalertState] = useState(defaultValues)
+}) {
+  const [alertState, setAlertState] = useState(defaultValues)
 
   const $portal_root =
     typeof window === 'undefined'
@@ -38,12 +40,12 @@ export const AlertContextProvider = ({
       : document.getElementById('root-portal')
 
   const close = useCallback(() => {
-    setalertState(defaultValues)
+    setAlertState(defaultValues)
   }, [])
 
   const open = useCallback(
     ({ onButtonClick, ...options }: AlertOptions) => {
-      setalertState({
+      setAlertState({
         ...options,
         onButtonClick: () => {
           close()
@@ -67,11 +69,12 @@ export const AlertContextProvider = ({
   )
 }
 
-export const useAlertContext = () => {
+export function useAlertContext() {
   const values = useContext(Context)
 
-  if (values === null) {
+  if (values == null) {
     throw new Error('AlertContext 내부에서 사용해주세요')
   }
+
   return values
 }
