@@ -43,6 +43,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.2.5"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:18.3.1"],\
+          ["react-hook-form", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:7.51.5"],\
           ["react-infinite-scroll-component", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:6.1.0"],\
           ["react-query", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:3.39.3"],\
           ["swiper", "npm:11.1.4"],\
@@ -2006,6 +2007,7 @@ const RAW_RUNTIME_STATE =
           ["prettier", "npm:3.2.5"],\
           ["react", "npm:18.3.1"],\
           ["react-dom", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:18.3.1"],\
+          ["react-hook-form", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:7.51.5"],\
           ["react-infinite-scroll-component", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:6.1.0"],\
           ["react-query", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:3.39.3"],\
           ["swiper", "npm:11.1.4"],\
@@ -5149,6 +5151,28 @@ const RAW_RUNTIME_STATE =
           ["loose-envify", "npm:1.4.0"],\
           ["react", "npm:18.3.1"],\
           ["scheduler", "npm:0.23.2"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-hook-form", [\
+      ["npm:7.51.5", {\
+        "packageLocation": "../../../.yarn/berry/cache/react-hook-form-npm-7.51.5-1449dfc378-10c0.zip/node_modules/react-hook-form/",\
+        "packageDependencies": [\
+          ["react-hook-form", "npm:7.51.5"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:7.51.5", {\
+        "packageLocation": "./.yarn/__virtual__/react-hook-form-virtual-7d191cf443/4/.yarn/berry/cache/react-hook-form-npm-7.51.5-1449dfc378-10c0.zip/node_modules/react-hook-form/",\
+        "packageDependencies": [\
+          ["react-hook-form", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:7.51.5"],\
+          ["@types/react", "npm:18.3.3"],\
+          ["react", "npm:18.3.1"]\
         ],\
         "packagePeers": [\
           "@types/react",\

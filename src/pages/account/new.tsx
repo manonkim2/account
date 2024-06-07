@@ -1,8 +1,13 @@
+import Form from '@/components/account/Form'
 import Terms from '@/components/account/Terms'
+import FixedBottomButton from '@/components/shared/FixedBottomButton'
+import FullPageLoader from '@/components/shared/FullPageLoader'
+import withAuth from '@/components/shared/hooks/withAuth'
 import ProgressBar from '@/components/shared/ProgressBar'
 import useUser from '@/hooks/useUser'
+import { IAccount } from '@/models/account'
 import { IUser } from '@/models/user'
-import { getAccount, getTerms, setTerms } from '@/remote/account'
+import { createAccount, getAccount, getTerms, setTerms } from '@/remote/account'
 import { GetServerSidePropsContext } from 'next'
 import { getSession } from 'next-auth/react'
 import { useRouter } from 'next/router'
@@ -29,6 +34,35 @@ const AccountNewPage = ({ initialStep }: { initialStep: number }) => {
             setstep(step + 1)
           }}
         />
+      )}
+
+      {step === 1 && (
+        <Form
+          onNext={async (formValues) => {
+            const newAccount = {
+              ...formValues,
+              accountNumber: Date.now(),
+              balance: 0,
+              status: 'READY',
+              userId: user?.id as string,
+            } as IAccount | any
+
+            await createAccount(newAccount)
+            setstep(step + 1)
+          }}
+        />
+      )}
+
+      {step === 2 && (
+        <>
+          <FullPageLoader message="계좌개설 신청이 완료되었습니다." />
+          <FixedBottomButton
+            label="확인"
+            onClick={() => {
+              navigate.push('/')
+            }}
+          />
+        </>
       )}
     </div>
   )
@@ -64,4 +98,4 @@ export async function getServerSideProps(context: GetServerSidePropsContext) {
   }
 }
 
-export default AccountNewPage
+export default withAuth(AccountNewPage)
