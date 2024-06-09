@@ -32,6 +32,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.12.13"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["date-fns", "npm:3.6.0"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:14.2.3"],\
           ["eslint-config-prettier", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:9.1.0"],\
@@ -1996,6 +1997,7 @@ const RAW_RUNTIME_STATE =
           ["@types/node", "npm:20.12.13"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
+          ["date-fns", "npm:3.6.0"],\
           ["eslint", "npm:8.57.0"],\
           ["eslint-config-next", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:14.2.3"],\
           ["eslint-config-prettier", "virtual:cce6edf4db8b6c034d0494167642e47dd53eb3d460d46fc8e6ea1460f089770ceca0f9f4787b90fdef0a53c07d180b7531a64563cf410d3bd7d4fc5341868e6e#npm:9.1.0"],\
@@ -2559,6 +2561,15 @@ const RAW_RUNTIME_STATE =
           ["call-bind", "npm:1.0.7"],\
           ["es-errors", "npm:1.3.0"],\
           ["is-data-view", "npm:1.0.1"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["date-fns", [\
+      ["npm:3.6.0", {\
+        "packageLocation": "../../../.yarn/berry/cache/date-fns-npm-3.6.0-e59d980978-10c0.zip/node_modules/date-fns/",\
+        "packageDependencies": [\
+          ["date-fns", "npm:3.6.0"]\
         ],\
         "linkType": "HARD"\
       }]\
