@@ -1,16 +1,38 @@
 import dynamic from 'next/dynamic'
 import withAuth from '@/components/shared/hooks/withAuth'
+import Spacing from '@/components/shared/Spacing'
 
 const Transactions = dynamic(() => import('@components/account/Transactions'))
 const MonthlyChart = dynamic(() => import('@components/account/MonthlyChart'))
+const CategoryPieChart = dynamic(
+  () => import('@components/account/CategoryChart'),
+)
 
 const AccountPage = () => {
   return (
     <div>
       <MonthlyChart chartData={generateMonthlyChartData()} />
+      <Spacing
+        size={6}
+        backgroundColor="gray100"
+        style={{ margin: '20px 0' }}
+      />
+      <CategoryPieChart chartData={generatePieChartData()} />
+      <Spacing
+        size={6}
+        backgroundColor="gray100"
+        style={{ margin: '20px 0' }}
+      />
       <Transactions />
     </div>
   )
+}
+
+function generatePieChartData() {
+  return ['카페', '쇼핑', '여행', '커피'].map((label) => ({
+    label,
+    amount: Math.floor(Math.random() * (100000 - 10000 + 1)) + 10000,
+  }))
 }
 
 function generateMonthlyChartData() {
