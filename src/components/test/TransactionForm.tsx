@@ -11,7 +11,7 @@ import { createTransaction } from '@/remote/transaction'
 const TransactionForm = () => {
   const [formValues, setformValues] = useState({
     userId: '',
-    type: 'diposit',
+    type: 'deposit',
     amount: '',
     displayText: '',
   })

@@ -30,7 +30,7 @@ const Transactions = () => {
       ) : (
         <ul>
           {transactions?.map((transaction) => {
-            const 입금 = transaction.type === 'diposit'
+            const 입금 = transaction.type === 'deposit'
 
             return (
               <ListRow
