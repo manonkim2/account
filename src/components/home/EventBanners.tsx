@@ -9,6 +9,7 @@ import useEventBanner from './hooks/useEventBanner'
 import Link from 'next/link'
 import withSuspense from '../shared/hooks/withSuspense'
 import Skeleton from '../shared/Skeleton'
+import ErrorBoundary from '../shared/ErrorBoundary'
 
 const EventBanners = () => {
   const { data } = useEventBanner()
@@ -47,6 +48,15 @@ const bannerStyle = css`
   border-radius: 8px;
 `
 
+// 일부 컴포넌트만 errorboundary로 감싸서 전체앱에 지장없게
+const WrapErrorBoundary = () => {
+  return (
+    <ErrorBoundary fallbackComponent={<div>hi</div>}>
+      <EventBanners />
+    </ErrorBoundary>
+  )
+}
+
 export const BannerSkeleton = () => {
   return (
     <div style={{ padding: 24 }}>
@@ -55,6 +65,6 @@ export const BannerSkeleton = () => {
   )
 }
 
-export default withSuspense(EventBanners, {
+export default withSuspense(WrapErrorBoundary, {
   fallback: <BannerSkeleton />,
 })

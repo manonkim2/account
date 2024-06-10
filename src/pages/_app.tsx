@@ -8,6 +8,7 @@ import globalStyles from '@/styles/globalStyles'
 import Layout from '@/components/shared/Layout'
 import Navbar from '@/components/shared/Navbar'
 import { AlertContextProvider } from '@/contexts/AlertContext'
+import ErrorBoundary from '@/components/shared/ErrorBoundary'
 
 const client = new QueryClient({})
 
@@ -22,10 +23,12 @@ export default function App({
         <QueryClientProvider client={client}>
           <ReactQueryDevtools />
           <Hydrate state={dehydratedState}>
-            <AlertContextProvider>
-              <Navbar />
-              <Component {...pageProps} />
-            </AlertContextProvider>
+            <ErrorBoundary>
+              <AlertContextProvider>
+                <Navbar />
+                <Component {...pageProps} />
+              </AlertContextProvider>
+            </ErrorBoundary>
           </Hydrate>
         </QueryClientProvider>
       </SessionProvider>

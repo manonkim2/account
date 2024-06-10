@@ -15,6 +15,10 @@ export const getEventBanners = async ({
 
   const snapshot = await getDocs(eventBannerQuery)
 
+  if (snapshot.docs.length === 1) {
+    throw new Error('hi, I am error')
+  }
+
   return snapshot.docs.map((doc) => ({
     id: doc.id,
     ...(doc.data() as IEventBanner),
