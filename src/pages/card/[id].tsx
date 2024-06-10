@@ -11,6 +11,7 @@ import Top from '@shared/Top'
 import ListRow from '@shared/ListRow'
 import Flex from '@shared/Flex'
 import Text from '@shared/Text'
+import SEO from '@/components/shared/SEO'
 
 const FixedBottomButton = dynamic(() => import('@shared/FixedBottomButton'), {
   ssr: false,
@@ -37,6 +38,7 @@ function CardDetailPage({ initialCard }: CardDetailPageProps) {
 
   return (
     <div>
+      <SEO title={`${corpName} ${name}`} description={subTitle} image="" />
       <Top title={`${corpName} ${name}`} subTitle={subTitle} />
 
       <ul>
