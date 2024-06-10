@@ -110,7 +110,6 @@ const CreditPage = () => {
 
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const session = await getSession(context)
-  console.log('🚀 ~ getServerSideProps ~ session:', session)
 
   if (session != null && session.user != null) {
     const client = new QueryClient()

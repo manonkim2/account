@@ -1,7 +1,7 @@
 import useUser from '@/hooks/useUser'
 import { getTerms, updateTerms } from '@/remote/account'
 import { 약관목록 } from '@/constants/account'
-import { useMemo } from 'react'
+import { cache, useMemo } from 'react'
 import {
   dehydrate,
   QueryClient,
@@ -31,6 +31,7 @@ const TermsPage = () => {
     (termsIds: string[]) => updateTerms(user?.id as string, termsIds),
     {
       onSuccess: () => {
+        // 성공했을때 cache data 갱신
         client.invalidateQueries(['terms', user?.id])
       },
       onError: () => {},

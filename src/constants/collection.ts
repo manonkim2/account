@@ -5,4 +5,5 @@ export const COLLECTIONS = {
   TERMS: 'TERMS',
   ACCOUNT: 'ACCOUNT',
   TRANSACTION: 'TRANSACTION',
+  FAQ: 'FAQ',
 }
