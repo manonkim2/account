@@ -19,7 +19,6 @@ const CreditCheckPage = () => {
 
   const { data: status } = useCreditCheck({
     onSuccess: (credicScore) => {
-      console.log('credocscore', credicScore)
       setreadyToPoll(false)
       mutate(credicScore)
     },
